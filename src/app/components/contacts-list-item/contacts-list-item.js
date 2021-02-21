@@ -1,9 +1,12 @@
 import React from "react";
 
-export default function ContactsListItem() {
+const ContactsListItem = ({ contact }) => {
+  debugger;
   return (
     <>
-      <li>Test</li>
+      <li>{contact.firstName}</li>
     </>
   );
-}
+};
+
+export default ContactsListItem;
