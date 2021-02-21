@@ -1,6 +1,6 @@
 # Phonebook Demo Frontend
 
-Hey, It's a Phonebook demo project.
+Hey, It's a Phonebook demo project. And developed with React.
 
 ## Installation
 
