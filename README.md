@@ -6,14 +6,10 @@ Hey, It's a Phonebook demo project.
 
 In the project directory, run one by one:
 
-### `yarn/npm install`
-OR
-### `npm install`
+### `yarn install`
 Installs the required packages.
 
 ### `yarn start`
-OR
-### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
