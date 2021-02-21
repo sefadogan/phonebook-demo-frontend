@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ContactService from "../../services/contact/contact-service";
 import ContactsListItem from "../contacts-list-item/contacts-list-item";
+import NoResult from "../shared/no-result/no-result";
 import "./contacts-list.css";
 import { Spinner } from "reactstrap";
 
@@ -30,7 +31,7 @@ const ContactsList = () => {
                 setVisibleSpinner={setVisibleSpinner}
               />
             ))
-          : !visibleSpinner && <span>There is no contacts yet.</span>}
+          : !visibleSpinner && <NoResult text="There is no contacts." />}
       </ul>
     </>
   );

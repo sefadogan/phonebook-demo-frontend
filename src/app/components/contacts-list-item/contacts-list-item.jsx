@@ -3,15 +3,16 @@ import { Button, Row, Col } from "reactstrap";
 import ContactService from "../../services/contact/contact-service";
 
 const ContactsListItem = ({ contact, setContactsList, setVisibleSpinner }) => {
+  //! There is no exception handling.
   const onClickedDelete = (e) => {
     e.preventDefault();
 
-    const response = ContactService.delete(contact.id);
-    response.then(() => {
+    const responseDelete = ContactService.delete(contact.id);
+    responseDelete.then(() => {
       setVisibleSpinner(true);
 
-      const response = ContactService.getList();
-      response
+      const responseList = ContactService.getList();
+      responseList
         .then((data) => {
           setContactsList(data);
         })
@@ -23,7 +24,7 @@ const ContactsListItem = ({ contact, setContactsList, setVisibleSpinner }) => {
     <>
       <Row>
         <Col className="col-md-6">
-          <li>{contact.firstName}</li>
+          <li>{`${contact.firstName}`}</li>
         </Col>
         <Col className="col-md-6">
           <Button color="danger" onClick={(e) => onClickedDelete(e)}>

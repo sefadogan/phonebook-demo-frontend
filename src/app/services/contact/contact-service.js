@@ -21,18 +21,16 @@ class ContactService {
       const config = {
         method: "DELETE",
       };
-      debugger;
+
       const url = `${ContactServiceUrls.DELETE}/${id}`;
       const response = await fetch(url, config);
 
       if (!response.ok) {
-        debugger;
         console.log(response.statusText);
       }
 
       return response;
     } catch (error) {
-      debugger;
       console.log(error);
     }
   };
